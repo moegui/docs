@@ -1,0 +1,25 @@
+cache:
+  key: general
+  paths:
+    - .cache/  
+
+bundle:
+  image: curlimages/curl:latest
+  stage: build
+  script:
+    - |
+      curl --location --output .cache/ui-bundle.zip "https://gitlab.com/api/v4/projects/25363906/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable&job_token=$CI_JOB_TOKEN"
+  artifacts:
+    paths:
+      - bundle
+
+pages:
+  image: antora/antora:2.3.1
+  stage: deploy
+  only:
+  - master
+  script:
+  - antora --attribute page-pagination= antora-playbook.yml
+  artifacts:
+    paths:
+    - public/
