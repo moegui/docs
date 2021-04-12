@@ -1,0 +1,13 @@
+site:
+  title: Moegui Docs
+  url: https://docs.moegui.com
+  start_page: elasticsearch::home.adoc
+content:
+  sources:
+  - url: https://gitlab.com/gianet/moegui/stack/elasticsearch.wiki
+    branches: master
+ui:
+  bundle:
+    url: .cache/ui-bundle.zip
+output:
+  dir: ./public
