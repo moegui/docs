@@ -2,12 +2,21 @@ site:
   title: Moegui Docs
   url: https://docs.moegui.com
   start_page: elasticsearch::home.adoc
+  robots: allow
 content:
   sources:
   - url: https://gitlab.com/gianet/moegui/stack/elasticsearch.wiki
     branches: master
+asciidoc:
+  attributes:
+    # experimental: ''
+    # idprefix: ''
+    # idseparator: '-'
+    page-pagination: ''
+    # source-language: asciidoc@
 ui:
   bundle:
     url: .cache/ui-bundle.zip
+  # supplemental_files: ./supplemental-ui
 output:
   dir: ./public
