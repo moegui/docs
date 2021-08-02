@@ -2,7 +2,7 @@ pages:
   image: antora/antora:2.3.1
   stage: deploy
   only:
-  - tag
+  - tags
   script:
   - antora antora-playbook.yml
   artifacts:
