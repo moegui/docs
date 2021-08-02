@@ -5,7 +5,7 @@ site:
   robots: allow
 content:
   sources:
-  - url: https://gitlab.com/gianet/moegui/stack/elasticsearch.wiki
+  - url: https://gitlab.com/moegui/elasticsearch.wiki
     branches: master
 asciidoc:
   attributes:
